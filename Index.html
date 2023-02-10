@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDTV</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 892px) {
+        #col-1,
+        #col-2,
+        #col-3 {
+          width: 100%;
+          text-align: center;
+        }
+      }
+        h1 {
+            text-align: center;
+            background-color: rgba(154, 0, 0, 0.137);
+            margin-bottom: 50px;
+            padding: 10px;
+            color: rgb(151, 2, 2);
+            font-size: 35px;
+        }
+
+        .back {
+            background-image: url('data:image/jpeg;base64,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');
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100vh;
+        }
+
+        .clearfix {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .col {
+            width: 29%;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.336);
+            box-shadow: 0 0 10px 1px grey;
+            border-radius: 10px;
+            transition: all 0.5s;
+        }
+
+        .col:hover {
+            transform: scale(1.02);
+        }
+
+        /* Clearfix */
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            justify-content: space-around;
+        }
+
+        .youtube {
+            width: 29%;
+            height: 100px;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 0 10px 1px grey;
+            background-color: rgba(255, 255, 255, 0.336);
+
+        }
+        button{
+            margin-top: 5px;
+            padding: 2px 10px;
+            border-radius: 5px;
+            border: none;
+            color: white;
+            background-color: rgb(151, 2, 2);
+            transition: all 0.5s;
+        }
+        button:hover{
+            transform: scale(1.05);
+        }
+        button a{
+            text-decoration: none;
+            color: white;
+        }
+
+        @media screen and (max-width: 700px) {
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="back">
+        <h1>NDTV</h1>
+        <div class="clearfix">
+            <div id="col-1" class="col">
+                <h2>ISRO Successfully Launches New Rocket </h2>
+                <p>SSLV-D2, the Indian Space Research Organisation's (ISRO) new rocket successfully placed three
+                    satellites into the intended orbit shortly after its launch from Sriharikota, Andhra Pradesh this
+                    morning <a href="https://www.thehindu.com/sci-tech/science/isro-launches-sslvs-second-developmental-flight-with-three-satellites-from-sriharikota/article66492553.ece#:~:text=SSLV%2DD2%20lifted%20off%20from,after%20the%20vehicle%20took%20off.">read more..</a> </p>
+            </div>
+            <div id="col-2" class="col">
+                <h2>Turkey, Syria Earthquake</h2>
+                <p>The death toll from the catastrophic earthquake in Turkey and Syria has risen to nearly 21000 with no
+                    end in sight <a href="https://indianexpress.com/article/world/turkey-syria-earthquake-rescue-efforts-live-updates-8433125/">read more..</a> </p>
+            </div>
+            <div id="col-3" class="col">
+                <h2>Article 356: PM Modi Says</h2>
+                <p>India Gandhi alone used Article 356 to topple governments of regional parties in states as many as 50
+                    times, PM Modi said in the parliament <a href="https://news.abplive.com/news/india/parliament-budget-session-live-updates-opposition-respond-to-pm-modi-speech-congress-rahul-gandhi-tmc-mahua-moitra-amid-adani-hindenburg-row-1580988">read more..</a></p>
+            </div>
+        </div>
+        <div class="videos">
+            <div class="youtube">
+                <h3>ISRO LVM3-M2 Launch</h3>
+                <button><a href="https://youtu.be/CkQIf-5zDq0">Click watch</a></button>
+            </div>
+            <div class="youtube">
+                <h3>🟢Earthquake In Turkey Live</h3>
+                <button><a href="https://www.youtube.com/live/SULEGdQ4xVA?feature=share">Click watch</a></button>
+            </div>
+            <div class="youtube">
+                <h3>PM Modi Speech LIVE</h3>
+                <button><a href="https://www.youtube.com/live/UKECxBwGzFY?feature=share">Click watch</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
